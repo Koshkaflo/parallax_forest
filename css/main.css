@@ -28,4 +28,23 @@ body {
     width: 150px;
     height: 150px;
     background-repeat: no-repeat;
+    position: absolute;
+}
+
+.layers {
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.layers__container {
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+
+.layers__item {
+    position: absolute;
+    inset: -5vw;
+    background-size: cover;
+    background-position: center;
+    transform: rotateX(var(--move-y)) rotateY(var(--move-x));
 }
